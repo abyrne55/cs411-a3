@@ -1,28 +1,7 @@
-# Project Idea Brainstorming
+# Project Ideas
 
-## Requirements
- - Must utilize a database
- - Must correlate data from two publicly available API's
-   - Google Maps/Geolocation doesn't account
- - Must use OAuth or similar
- 
-## Ideas
-### Leafly & Spotify
-Type in the strain you're consuming and we'll recommend a playlist matching the qualities of the strain. Or vice versa!
+## Leafify
+With the recent legalization of recreational cannabis (a.k.a. marijuana) and the opening of 8 dispensaries in Massachusetts, thousands of people will be consuming legal cannabis for the first time in 2019. Just like any other plant, there are numerous subspecies or “strains” of cannabis, and each strain can cause a different psychoactive effect on the consumer. This can make it difficult for cannabis consumers who want to listen to music during their session to build a playlist that complements and enhances the qualities of the strain they’re consuming. To solve this problem, our team is proposing Leafify, an app that utilizes cannabis strain data from Leafly, “the world’s largest cannabis information resource,” to recommend the Spotify playlist that best fits the high the user is experiencing, while avoiding inappropriate music that would “harsh the user’s mellow.” Leafly makes strain qualities like “happy”, “euphoric”, “creative”, and “relaxing” available via their API, making it possible to cross-reference the qualities of a user-provided strain name with Spotify playlists that mention similar terms. When combined with a simple, intuitive UI and ads from GrubHub, we hope Leafify can become a profitable application that enhances the cannabis experience.
 
-### Leafly & Postmates/GrubHub
-Type in the strain you're consuming and we'll recommend food options nearby (using any food names mentioned in Leafly comments). Could also incorporate Venmo to automatically split costs with friends.
-
-### Leafly & YouTube
-Type in the strain you're consuming and we'll recommend an appropriate YouTube playlist (matching the qualities of the strain) for you to enjoy.
-
-### Glassdoor & CodeAcademy/Udemy (for Interview Prep)
-Type in the tech business that you'll be interviewing for and we'll recommend some tutorials for you to brush up on skills mentioned in GlassDoor reviews.
-
-### LinkedIn & Clothing (for Interviews Dress Tips)
-
-### LinkedIn & News
-Connect your LinkedIn and we'll give you news based on your field
-
-### Leafly, Weather, & Google Maps 
-Type in the strain you're consuming and we'll recommend nearby activities for you to enjoy, based on the weather and current popularity of the location.
+## Spotify & Google Calendar
+TBA
