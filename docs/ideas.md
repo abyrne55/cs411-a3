@@ -5,7 +5,7 @@ With the recent legalization of recreational cannabis (a.k.a. marijuana) and the
 
 **APIs Used:** [Spotify](https://developer.spotify.com), [Leafly](https://developer.leafly.com)
 
-**Database Usage:** Will be used as a user info store as for caching, since Leafly imposes a 420 request/day limit.
+**Database Usage:** Will be used as a user info store and for API request caching, since Leafly imposes a 420 request/day limit.
 
 ## Spotify & Google Calendar
 TBA
