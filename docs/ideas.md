@@ -8,4 +8,12 @@ With the recent legalization of recreational cannabis (a.k.a. marijuana) and the
 **Database Usage:** Will be used as a user info store and for API request caching, since Leafly imposes a 420 request/day limit.
 
 ## Spotify & Google Calendar
-TBA
+Google Calendar & Spotify
+
+## Play Day
+Nowadays with your busy schedule it might be hard to find a new jammin playlist, or even prepare for what your day might look like. Don’t you just wish you could find that perfect song to pump you up for your big meeting, or the perfect playlist for when you go to the gym? Well, luckily for you, by using Google Calendar and Spotify, we have found a solution to your problem! Our hopes are to create an app Play Day, that will recognize key words like: “gym”, “‘meeting” and “date” to create an optimal playlist before your next scheduled task, by using Google Calendar’s API, and then by analyzing a given calendar day for events, Play Day will and create/find a playlist, using Spotify’s API,  to email you. Even if you have nothing to do, having a “lazy Sunday”, or just relaxing with friends, Play Day would be able to recognize  this and recommend soothing jazz or instrumental music to compliment your state of mind. 
+
+**APIs Used:** [Spotify](https://developer.spotify.com), [Google Calendar](https://developers.google.com/calendar/)
+
+**Database Usage:** Will be used as a user info store and to store anything we need to store from the google calendar.
+
