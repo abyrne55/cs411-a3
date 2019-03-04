@@ -1,0 +1,2 @@
+# Login Story
+As a non-logged-in user, upon navigating to the web app, I will be presented with some basic information about the app, along with an option to login. Upon clicking “login,” I will be presented with a modal dialog presenting me with different OAuth services to login with (Google, Facebook, etc.). Upon clicking on the service of my choice and logging-in, I will either be directed to the Account Setup Story (if I’m logging in with this OAuth account for the first time) or to the Returning User Story (if I’ve logged in with this OAuth account before).
