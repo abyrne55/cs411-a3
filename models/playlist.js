@@ -11,3 +11,5 @@ function findPlaylist(mood) {
             return err;
         });
 }
+
+module.exports.findPlaylist = findPlaylist;
