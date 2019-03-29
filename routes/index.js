@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  /* [['example-playlist-link', 'example-playlist-name'], ['example-playlist-link', 'example-playlist-name']] */
+  /* [['playlist-link', 'Playlist-name'], ['playlist-link', 'playlist-name']] */
   res.render('index', { results: [] });
 });
 

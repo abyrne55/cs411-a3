@@ -4,7 +4,7 @@ var router = express.Router();
 
 spotify.getToken();
 
-/* GET search listing. */
+// GET search listing.
 router.post('/', function (req, res, next) {
     var keyword = req.body.playlist_name;
     spotify.spotifyApi.searchPlaylists(keyword)
