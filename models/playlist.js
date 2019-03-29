@@ -12,4 +12,4 @@ function findPlaylist(mood) {
         });
 }
 
-module.exports.findPlaylist = findPlaylist;
+module.exports findPlaylist = findPlaylist;
