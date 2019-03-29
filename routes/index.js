@@ -1,11 +1,10 @@
-
 var express = require('express');
 var router = express.Router();
-var playlist = require('../models/playlist');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { results: [] });
+  /* [['example-playlist-link', 'example-playlist-name'], ['example-playlist-link', 'example-playlist-name']] */
+  res.render('index', { results: [] });
 });
 
 module.exports = router;

@@ -1,7 +1,4 @@
-var SpotifyWebApi = require('spotify-web-api-node');
-
-// credentials are optional
-var spotifyApi = new SpotifyWebApi({});
+var express = require('express');
 
 function findPlaylist(mood) {
     const playlist_search = spotifyApi.searchPlaylists(mood)
@@ -11,5 +8,3 @@ function findPlaylist(mood) {
             return err;
         });
 }
-
-module.exports findPlaylist = findPlaylist;
