@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Spotify Playlist Search
+  p Please enter the name of the playlist you'd like to search for
+  form(method='POST' action='/search')
+    input(type='text' name='playlist_name')
+    input(type='submit' value='Search')
+
+  if results
+    h2 Search Results
+    ul
+      each val in results
+        li
+          a(href=val[0])= val[1]
+      else
+        li No results found
