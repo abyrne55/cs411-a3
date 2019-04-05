@@ -1,20 +1,6 @@
-extends layout
-
-block content
-  h1 Spotify Playlist Search
-  title  Please enter the name of the playlist you'd like to search for
-
- //-
-  form(method='POST' action='/search')
-    input(type='text' name='playlist_name')
-    input(type='submit' value='Search')
-
-  if results
-    h2 Search Results
-    ul
-      each val in results
-        li
-          a(href=val[0])= val[1]
-      else
-        li No results found
- title I am just trying to see this
+html
+  head
+    title Leafify
+    body
+      h1 Welcome to Leafify
+      h2 yo smoke weed and listen to music
