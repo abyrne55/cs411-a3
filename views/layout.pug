@@ -1,11 +1,8 @@
 doctype html
-extends layout
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
 
-style.
-  h1 {
-    font-size: 19px;
-    color: #464646;
-  }
-block content
-  h1= title
-  p Welcome to #{title}
+  body
+    block content

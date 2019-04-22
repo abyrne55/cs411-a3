@@ -1,0 +1,39 @@
+extends layout
+block content
+    doctype html
+    title LEAFIFY
+    h1 ABOUT Spotify Playlist Search
+    p Please enter the name of the playlist you'd like to search for
+    form(method='POST' action='/search')
+        input(type='text' name='playlist_name')
+        input(type='submit' value='Search')
+
+    if results
+        h2 Search Results
+        ul
+            each val in results
+                li
+                    a(href=val[0])= val[1]
+            else
+                li No results found
+
+
+
+
+
+    //title LEAFIFY
+    //head
+        meta(name='author' content='Matthew Lewicki')
+        meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1')
+        meta(charset='UTF-8')
+        script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+        title Spotify Login
+    //section
+        h1 Welcome to Spotify
+        form#loggin(method='post' name='loggin' action='#')
+            fieldset
+                input#username(name='username' type='text' placeholder='Username')
+            fieldset
+                input#password(name='password' type='password' placeholder='Password')
+            fieldset
+               input(type='submit' name='submit' value='Sign In')

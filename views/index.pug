@@ -1,6 +1,39 @@
-html
-  head
-    title Leafify
-    body
-      h1 Welcome to Leafify
-      h2 yo smoke weed and listen to music
+//main home page
+doctype html
+title LEAFIFY
+meta(charset='UTF-8')
+meta(name='viewport' content='width=device-width, initial-scale=1')
+link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway')
+style.
+    body,h1 {font-family: "Raleway", sans-serif}
+    body, html {height: 100%}
+    .bgimg {
+        background-image: url('https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+
+.bgimg.w3-display-container.w3-animate-opacity.w3-text-white
+    .w3-display-topleft.w3-padding-large.w3-xlarge
+        | 420
+        include includes/nav
+    .w3-display-middle
+
+        h1.w3-jumbo.w3-animate-top Leafify
+        hr.w3-border-grey(style='margin:auto;width:40%')
+        p.w3-large.w3-center Smoke Weed and Listen to Music
+        p What are you in the mood to listen to?
+            form(method='POST' action='/search')
+                input(type='text' name='playlist_name')
+                input(type='submit' value='Search')
+
+            if results
+
+                ul
+                    each val in results
+                        li
+                            a(href=val[0])= val[1]
+                    else
+                        li No results found
