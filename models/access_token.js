@@ -10,7 +10,7 @@ var spotifyApi = new SpotifyWebApi({
 });
 
 // Retrieve an access token. consult from https://www.npmjs.com/package/spotify-web-api-node
-function getToken() {
+function getToken(callback) {
     spotifyApi.clientCredentialsGrant().then(
         function (data) {
             console.log('The access token expires in ' + data.body['expires_in']);
@@ -18,6 +18,7 @@ function getToken() {
 
             // Set the access token on the API object to use it in later calls
             spotifyApi.setAccessToken(data.body['access_token']);
+            return callback();
         },
         function (err) {
             console.log('Something went wrong when retrieving an access token', err);
