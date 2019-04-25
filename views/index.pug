@@ -24,10 +24,15 @@ style.
         h1.w3-jumbo.w3-animate-top Leafify
         hr.w3-border-grey(style='margin:auto;width:40%')
         p.w3-large.w3-center Smoke Weed and Listen to Music
-        p What are you in the mood to listen to?
+        p What strain of cannabis are you consuming?
             form(method='POST' action='/search')
-                input(type='text' name='playlist_name')
+                input(type='text' name='strain_name')
                 input(type='submit' value='Search')
+
+            if strain
+                p Strain: #{strain.name} (#{strain.effects})
+            else
+                p Strain not found
 
             if results
 
