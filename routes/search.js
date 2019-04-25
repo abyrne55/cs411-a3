@@ -14,7 +14,7 @@ router.post('/', function (req, res, next) {
                res.render('index', {strain: strain, results: playlists});
            });
        } else {
-           res.render('index', {results: []});
+           res.render('index', {strain: 0, results: []});
        }
     });
 
