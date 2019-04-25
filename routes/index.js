@@ -1,10 +1,11 @@
 var express = require('express');
+var straindb = require('../models/strain.js');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  /* [['playlist-link', 'Playlist-name'], ['playlist-link', 'playlist-name']] */
-  res.render('index', { results: [] });
+  res.render('index', { });
 });
+
 
 module.exports = router;

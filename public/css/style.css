@@ -1,0 +1,19 @@
+.test{
+	background-image: url("https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+	background-size: cover;
+}
+
+.h1 {
+	align: center;
+	background-color: whitesmoke;
+	color: #2b542c;
+}
+
+.center {
+	text-align: center;
+}
+
+section {
+	height: 100vh;
+}
+

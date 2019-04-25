@@ -1,0 +1,46 @@
+
+extends layout
+block content
+    doctype html
+    title LEAFIFY
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway')
+    style.
+        body, h1 {
+            font-family: "Raleway", sans-serif
+        }
+
+        body, html {
+            height: 100%
+        }
+
+        .bgimg {
+            background-image: url('https://images.unsplash.com/photo-1476231682828-37e571bc172f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2467&q=80');
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+        }
+
+    .bgimg.w3-display-container.w3-animate-opacity.w3-text-white
+        .w3-display-topleft.w3-padding-large.w3-xlarge
+            | 420
+            include includes/nav
+        .w3-display-middle
+            h1.w3-jumbo.w3-animate-top About Us
+            hr.w3-border-grey(style='margin:auto;width:40%')
+            p.w3-large.w3-center
+            | With the recent legalization of recreational cannabis (a.k.a. marijuana) and the opening of 8 dispensaries in Massachusetts, thousands of people will be consuming legal cannabis for
+            | the first time in 2019. Just like any other plant, there are numerous subspecies or “strains” of cannabis,
+            | and each strain can cause a different psychoactive effect on the consumer. This can make it difficult for
+            | cannabis consumers who want to listen to music during their session to build a playlist that complements and enhances
+            | the qualities of the strain they’re consuming. To solve this problem, our team is proposing Leafify, an app that utilizes
+            | cannabis strain data from Leafly, “the world’s largest cannabis information resource,” to recommend the Spotify
+            | playlist that best fits the high the user is experiencing, while avoiding inappropriate music that would “harsh the user’s
+            | mellow.” Leafly makes strain qualities like “happy”, “euphoric”, “creative”, and “relaxing” available via their API,
+            | making it possible to cross-reference the qualities of a user-provided strain name with Spotify playlists that mention similar terms.
+            | we hope Leafify can become a profitable application that enhances the cannabis experience.
+
+
+
