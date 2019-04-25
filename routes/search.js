@@ -1,23 +1,23 @@
 var express = require('express');
-var spotify = require('../models/access_token');
+var straindb = require('../models/strain');
+var playlistdb = require('../models/playlist');
 var router = express.Router();
 
-spotify.getToken();
 
-// GET search listing.
+// POST search listing.
 router.post('/', function (req, res, next) {
-    var keyword = req.body.playlist_name;
-    spotify.spotifyApi.searchPlaylists(keyword)
-        .then(function (data) {
-            console.log('Found playlists are', data.body);
-            playlists = [];
-            for (var i = 0; i < data.body.playlists.items.length; i++) {
-                playlists.push([data.body.playlists.items[i].external_urls['spotify'], data.body.playlists.items[i].name])
-            }
-            res.render('index', {results: playlists});
-        }, function (err) {
-            console.log('Something went wrong!', err);
-        });
+    let strain_name = req.body.strain_name;
+    straindb.getStrainsByName(strain_name, function(strain_list){
+       if (strain_list && strain_list.length && strain_list[0].effects) {
+           let strain = strain_list[0];
+           playlistdb.getPlaylistsByEffects(strain.effects, function(playlists){
+               res.render('index', {strain: strain, results: playlists});
+           });
+       } else {
+           res.render('index', {strain: 0, results: []});
+       }
+    });
+
 });
 
 module.exports = router;
