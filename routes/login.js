@@ -5,6 +5,7 @@ var SpotifyWebApi = require('spotify-web-api-node');
 
 router.get('/', function (req, res, next) {
     res.render('login');
+
 });
 
 router.post('/', function (req, res, next) {
@@ -25,6 +26,8 @@ router.post('/', function (req, res, next) {
     // http://accounts.spotify.com:443/authorize?client_id=5fe01282e44241328a84e7c5cc169165&response_type=code&redirect_uri=https://example.com/callback&scope=user-read-private%20user-read-email&state=some-state-of-my-choice
     console.log(authorizeURL);
     res.status(301).redirect(authorizeURL);
+    //return res.redirect('/loggedon');//line I just added
 });
+
 
 module.exports = router;
