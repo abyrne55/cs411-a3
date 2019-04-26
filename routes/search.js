@@ -20,19 +20,26 @@ const strainSchema = new Schema({
     effects: String,
     ailment: String,
     flavor: String,
-    playlists: Object
+    expires: Date,
+//    playlists: Object
 });
 
 
-var Strain = mongoose.model("Strain2", strainSchema);
+var Strain = mongoose.model("Strain3", strainSchema);
 
 // POST search listing.
 router.post('/', function (req, res, next) {
     let strain_name = req.body.strain_name;
     Strain.find({'name' : new RegExp(strain_name, 'i')}, function(err, docs){
-        //console.log(strain_name);
+        x = new Date();
+        //console.log(x.getTime());
+        //right now something will expire after 20 minutes
+        //console.log(docs[0].expires.getTime())
+        //console.log(x.getTime() - docs[0].expires.getTime());
         if(docs[0]){
-            res.render('index', {strain: docs[0], results: docs[0].playlists});
+            playlistdb.getPlaylistsByEffects(docs[0].effects, function (playlists) {
+                res.render('index', {strain: docs[0], results: playlists});
+        });
         }
         else{
             straindb.getStrainsByName(strain_name, function (strain_list) {
@@ -47,7 +54,8 @@ router.post('/', function (req, res, next) {
                             effects: strain.effects,
                             ailment: strain.ailment,
                             flavor: strain.flavor,
-                            playlists: playlists
+                            expires: new Date(),
+ //                           playlists: playlists
                         });
                         //console.log(playlists, typeof(playlists));
                         addStrain.save(function(error) {
