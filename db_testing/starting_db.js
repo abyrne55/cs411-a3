@@ -1,8 +1,7 @@
-// getting-started.js
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test', {useNewUrlParser: true});
 
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
     console.log("Connection succeeded.");
@@ -10,7 +9,7 @@ db.once('open', function() {
 
 var Schema = mongoose.Schema;
 
-var strainSchema = new Schema({
+const strainSchema = new Schema({
     _id: Number,
     name: String,
     Description: String,
@@ -21,7 +20,7 @@ var strainSchema = new Schema({
     expires: Date
 });
 
-var personSchema = new Schema({
+const personSchema = new Schema({
     first: String,
     last: String,
     faveGenre: String,
@@ -29,9 +28,9 @@ var personSchema = new Schema({
     expires: Date
 });
 
-var Strain = mongoose.model("Strain", strainSchema);
+export var Strain = mongoose.model("Strain", strainSchema);
 
-var testStrain = new Strain({
+const testStrain = new Strain({
     id: 1,
     name: '100 OG',
     Description: "Named after its high price",
@@ -42,7 +41,7 @@ var testStrain = new Strain({
     expires: new Date(1995, 11, 17)
 });
 
-db.Strain.find({"name": "StrainName"}, {limit:1})
+//db.Strain.find({"name": "StrainName"}, {limit:1})
 //function returns 0 if not in DB, 1 if it is in DB
 
 
@@ -61,9 +60,9 @@ db.Strain.find({"name": "StrainName"}, {limit:1})
 //});
 
 //gives us everything stored in the Strain database
-Strain.find({}, function (error, documents) {
-    console.log(documents);
-});
+//Strain.find({}, function (error, documents) {
+//    console.log(documents);
+//});
 
 
 // try {

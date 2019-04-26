@@ -23,7 +23,11 @@ function getPlaylistsByEffects(effects, callback) {
         spotify.spotifyApi.searchPlaylists(query)
             .then(function (data) {
                 playlists = [];
-                for (var i = 0; i < data.body.playlists.items.length; i++) {
+                var len = data.body.playlists.items.length;
+                if(data.body.playlists.items.length>10){
+                    len = 10;
+                }
+                for (var i = 0; i < len; i++) {
                     playlists.push([data.body.playlists.items[i].external_urls['spotify'], data.body.playlists.items[i].name]);
                 }
                 return callback(playlists);
