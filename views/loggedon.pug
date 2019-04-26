@@ -1,5 +1,4 @@
-//main home page
-    //will ask you to log in
+//when you are already logged in you will be redirected to this page
 doctype html
 title LEAFIFY
 meta(charset='UTF-8')
@@ -10,7 +9,7 @@ style.
     body,h1 {font-family: "Raleway", sans-serif}
     body, html {height: 100%}
     .bgimg {
-        background-image: url('https://images.unsplash.com/photo-1473773508845-188df298d2d1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+        background-image: url('https://photo.zephotos.com/o/vt/green-summer-grass.jpg');
         min-height: 100%;
         background-position: center;
         background-size: cover;
@@ -22,6 +21,12 @@ style.
     .w3-display-middle
         h1.w3-jumbo.w3-animate-top Leafify
         hr.w3-border-grey(style='margin:auto;width:40%')
+        p.w3-large.w3-center Smoke Weed and Listen to Music
+        //want to know what you're smoking after you've logged in\
+        p Now that you've logged in. What strain of cannabis are you consuming?
+        form(method='POST' action='/search')
+            input(type='text' name='strain_name')
+            input(type='submit' value='Search')
 
         if strain
             p Strain: #{strain.name} (#{strain.effects})
@@ -36,11 +41,6 @@ style.
                         a(href=val[0])= val[1]
                 else
                     li No results found
-
-
-
-
-
 
 
 
