@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res, next) {
     var scopes = ['user-read-private', 'user-read-email'],
-        redirectUri = 'http://' + req.get('host'),
+        redirectUri = "http://localhost:3000/loggedon",
         clientId = spotify.spotifyApi.getClientId(),
         state = 'some-state-of-my-choice';
 
